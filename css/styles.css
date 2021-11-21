@@ -17,6 +17,7 @@
   --team-bgc: #f5f4fa;
   --filters-color: #f5f4fa;
   --border-header-color: #ececec;
+  --hero-bgc: #c4c4c4;
 }
 
 body {
@@ -40,6 +41,8 @@ ul {
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .list {
@@ -58,6 +61,7 @@ img {
   width: 1200px;
   padding-right: 15px;
   padding-left: 15px;
+  /* outline: 3px solid coral; */
   margin: 0 auto;
 }
 
@@ -150,11 +154,22 @@ img {
 /* Hero section */
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
   background-color: var(--secondary-bgc);
   text-align: center;
-  /* margin-bottom: 94px; */
+}
+
+/* Overlay */
+.overlay {
+  max-width: 1600px;
+  min-height: 600px;
+  margin: 0 auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-title {
@@ -166,6 +181,7 @@ img {
   margin-bottom: 30px;
   color: var(--primary-bgc);
 }
+
 .hero-button {
   padding: 10px 32px;
   border: 0px;
@@ -181,6 +197,7 @@ img {
 
 .hero-button:focus,
 .hero-button:hover {
+  background-color: #188ce8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
