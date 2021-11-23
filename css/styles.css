@@ -61,7 +61,6 @@ img {
   width: 1200px;
   padding-right: 15px;
   padding-left: 15px;
-  /* outline: 3px solid coral; */
   margin: 0 auto;
 }
 
@@ -230,7 +229,13 @@ img {
   margin-right: 30px;
 }
 
-.features .item::before {
+.feature-icon {
+  background-color: #f5f4fa;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+}
+
+/* .features .item::before {
   content: '';
   display: block;
   height: 120px;
@@ -240,9 +245,9 @@ img {
   border-radius: 4px;
   margin-bottom: 30px;
   background-color: #f5f4fa;
-}
+} */
 
-.icon-antenna::before {
+/* .icon-antenna::before {
   background-image: url(../images/antenna.svg);
 }
 
@@ -256,7 +261,7 @@ img {
 
 .icon-astronaut::before {
   background-image: url(../images/astronaut.svg);
-}
+} */
 
 .features .title {
   color: var(--title-text-color);
@@ -306,6 +311,8 @@ img {
   padding-bottom: 30px;
   border-radius: 0px 0px 4px 4px;
   background-color: var(--primary-bgc);
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
 .member:not(:last-child) {
@@ -323,6 +330,82 @@ img {
 .position {
   font-size: 16px;
   line-height: 1.18;
+  margin-bottom: 16px;
+}
+
+/* Social-networks*/
+.social-networks-list {
+  display: flex;
+}
+.social-networks-item {
+  width: 44px;
+  height: 44px;
+}
+
+.social-networks-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-networks-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  text-align: center;
+}
+.social-networks-link:hover,
+:focus {
+  background-color: var(--accent-color);
+}
+.social-networks-icon {
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  fill: #afb1b8;
+}
+
+.social-networks-icon:hover,
+:focus {
+  fill: #ffffff;
+}
+
+/* Clients */
+.clients-list {
+  display: flex;
+}
+.client {
+  text-align: center;
+  width: 170px;
+  height: 92px;
+}
+.client:not(:last-child) {
+  margin-right: 30px;
+}
+
+.client-link {
+  display: block;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+}
+
+.client-link:hover,
+:focus {
+  border-color: var(--accent-color);
+}
+.client-icon {
+  fill: #afb1b8;
+  width: 170px;
+  height: 92px;
+  padding: 16px 32px;
+}
+
+.client-icon:focus,
+:hover {
+  fill: var(--accent-color);
 }
 
 /* Footer */
@@ -443,4 +526,16 @@ img {
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.87;
+}
+
+.action {
+  padding: 0;
+  margin: 0;
+  margin-right: 10px;
+  outline: 1px solid #212121;
+}
+
+.link-icon {
+  width: 16px;
+  height: 12px;
 }
