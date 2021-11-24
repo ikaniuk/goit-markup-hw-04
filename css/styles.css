@@ -18,6 +18,8 @@
   --filters-color: #f5f4fa;
   --border-header-color: #ececec;
   --hero-bgc: #c4c4c4;
+  --footer-icon-bgc: rgba(255, 255, 255, 0.1);
+  --icon-color: #afb1b8;
 }
 
 body {
@@ -28,6 +30,7 @@ body {
   font-size: 14px;
   margin: 0px;
 }
+
 h1,
 h2,
 h3,
@@ -39,6 +42,7 @@ ul {
   margin: 0px;
   padding: 0px;
 }
+
 img {
   display: block;
   max-width: 100%;
@@ -139,6 +143,9 @@ img {
 }
 
 .contacts .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--primary-text-color);
   font-weight: 500;
   line-height: 1.14;
@@ -148,6 +155,11 @@ img {
 .contacts .link:hover,
 .contacts .link:focus {
   color: var(--accent-color);
+}
+
+.contacts-icon {
+  fill: currentColor;
+  margin-right: 10px;
 }
 
 /* Hero section */
@@ -235,34 +247,6 @@ img {
   margin-bottom: 30px;
 }
 
-/* .features .item::before {
-  content: '';
-  display: block;
-  height: 120px;
-  background-repeat: no-repeat;
-  background-size: 70px;
-  background-position: center;
-  border-radius: 4px;
-  margin-bottom: 30px;
-  background-color: #f5f4fa;
-} */
-
-/* .icon-antenna::before {
-  background-image: url(../images/antenna.svg);
-}
-
-.icon-clock::before {
-  background-image: url(../images/clock.svg);
-}
-
-.icon-diagram::before {
-  background-image: url(../images/diagram.svg);
-}
-
-.icon-astronaut::before {
-  background-image: url(../images/astronaut.svg);
-} */
-
 .features .title {
   color: var(--title-text-color);
   font-weight: 700;
@@ -337,7 +321,11 @@ img {
 .social-networks-list {
   display: flex;
 }
+
 .social-networks-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
 }
@@ -347,65 +335,62 @@ img {
 }
 
 .social-networks-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  text-align: center;
-}
-.social-networks-link:hover,
-:focus {
-  background-color: var(--accent-color);
-}
-.social-networks-icon {
-  height: 44px;
-  width: 44px;
-  border-radius: 50%;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  fill: #afb1b8;
+  color: var(--icon-color);
 }
 
-.social-networks-icon:hover,
-:focus {
-  fill: #ffffff;
+.social-networks-link:hover,
+.social-networks-link:focus {
+  color: var(--primary-bgc);
+  background-color: var(--accent-color);
+}
+
+.social-networks-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
 
 /* Clients */
+
 .clients-list {
   display: flex;
 }
+
 .client {
-  text-align: center;
   width: 170px;
   height: 92px;
 }
+
 .client:not(:last-child) {
   margin-right: 30px;
 }
 
 .client-link {
-  display: block;
-  border: 1px solid #afb1b8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
   border-radius: 4px;
   width: 100%;
   height: 100%;
+  color: var(--icon-color);
 }
 
 .client-link:hover,
-:focus {
-  border-color: var(--accent-color);
-}
-.client-icon {
-  fill: #afb1b8;
-  width: 170px;
-  height: 92px;
-  padding: 16px 32px;
+.client-link:focus {
+  color: var(--accent-color);
 }
 
-.client-icon:focus,
-:hover {
-  fill: var(--accent-color);
+.client-icon {
+  width: 106px;
+  height: 60px;
+  fill: currentColor;
 }
 
 /* Footer */
@@ -414,6 +399,16 @@ img {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+
+.flex-footer {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-content {
+  margin-right: 70px;
+}
+
 .logo-footer {
   display: block;
   margin-bottom: 20px;
@@ -447,6 +442,33 @@ img {
 .footer-contacts .link:hover,
 .footer-contacts .link:focus {
   color: var(--primary-bgc);
+}
+
+.footer-social-networks {
+}
+.footer-title {
+  margin-bottom: 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  color: var(--primary-bgc);
+}
+
+.footer-section .social-networks-link {
+  color: var(--primary-bgc);
+  background-color: var(--footer-icon-bgc);
+}
+
+.footer-section .social-networks-link:focus,
+.footer-section .social-networks-link:hover {
+  background-color: var(--accent-color);
+}
+
+.footer-section .social-networks-icon {
+  fill: currentColor;
 }
 
 /* Оформление страницы portfolio.html */
